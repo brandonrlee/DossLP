@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doss — Know the room before you enter it.</title>
-<meta name="description" content="A pre-event intelligence agent that texts you who matters, what to say, and what to remember before you walk into a room.">
+<title>Doss · founders show up in the room first</title>
+<meta name="description" content="Doss keeps a private record of every room a VC associate was in and who they flagged, met, or passed on, then shows which rooms surface fundable founders first.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -298,6 +298,77 @@
     display: block;
   }
   @media (max-width: 1024px) { .hero-demo { max-width: 320px; max-height: 70vh; } }
+
+  /* === Hero sourcing record (sample) === */
+  .record-card {
+    width: 100%;
+    max-width: 460px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    padding: 22px 22px 18px;
+    font-size: 13.5px;
+    color: var(--text-2);
+  }
+  .record-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .record-tag {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--orange-bg);
+    color: var(--orange-deep);
+  }
+  .record-cols, .record-row {
+    display: grid;
+    grid-template-columns: 1.9fr 0.8fr 0.7fr 0.9fr;
+    gap: 10px;
+    align-items: center;
+  }
+  .record-cols {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .record-row {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .record-room { font-weight: 600; color: var(--text); }
+  .record-room small {
+    display: block;
+    font-weight: 400;
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+  .record-hit { color: var(--emerald-deep); font-weight: 700; }
+  .record-foot {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: var(--emerald-bg);
+    color: var(--emerald-darker);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  @media (max-width: 560px) {
+    .record-card { padding: 16px 14px 14px; font-size: 12.5px; }
+    .record-cols, .record-row { gap: 6px; }
+  }
   @media (max-width: 768px)  { .hero-demo { max-width: 280px; } }
   @media (max-width: 560px)  { .hero-demo { max-width: 240px; } }
 
@@ -1822,12 +1893,12 @@
       <span>Doss</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#intelligence">Features</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#intelligence">Why rooms</a></li>
+      <li><a href="#workflow">How it works</a></li>
     </ul>
     <div class="nav-actions">
       <a href="./login" class="btn btn-primary">
-        Get Doss
+        Request access
         <span class="btn-arrow">→</span>
       </a>
     </div>
@@ -1846,21 +1917,20 @@
       <div class="hero-left">
         <div class="hero-pill">
           <span class="pill-dot"></span>
-          <span class="pill-num">12,482</span>
-          rooms briefed
+          for vc associates and scouts
         </div>
 
         <h1 class="hero-headline">
-          meet doss. it lives in your texts and <em>reads the room</em> before you do.
+          founders show up in the room <em>before</em> they show up in the data.
         </h1>
 
         <p class="hero-sub">
-          connect luma, partiful, and your calendar. doss quietly finds who matters, what to say, and who you forgot to follow up with.
+          doss keeps a private record of every room you were in, on luma, partiful, or a dinner invite, and who you flagged, met, or passed on. then it shows you which rooms surface fundable founders first.
         </p>
 
         <div class="hero-ctas">
           <a href="./login" class="btn btn-primary btn-large">
-            text doss now
+            request early access
             <span class="btn-arrow">→</span>
           </a>
         </div>
@@ -1868,137 +1938,86 @@
         <div class="hero-meta">
           <div class="hero-meta-item">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            End-to-end encrypted
+            your notes stay in your account
           </div>
           <div class="hero-meta-item">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            60s scan time
+            names only from rooms you attended
           </div>
           <div class="hero-meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Delivered via SMS
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            luma, partiful, calendar
           </div>
         </div>
       </div>
 
       <div class="hero-right">
-        <iframe class="hero-demo" src="assets/doss-demo.html" title="Doss demo" loading="eager" allow="autoplay" frameborder="0"></iframe>
+        <div class="record-card" aria-label="Sample sourcing record">
+          <div class="record-head">
+            <span>your sourcing record</span>
+            <span class="record-tag">sample</span>
+          </div>
+          <div class="record-cols">
+            <span>room</span><span>founders</span><span>raised</span><span>you</span>
+          </div>
+          <div class="record-row">
+            <span class="record-room">infra founders dinner<small>calendar invite</small></span>
+            <span>9</span><span class="record-hit">3</span><span>met 1</span>
+          </div>
+          <div class="record-row">
+            <span class="record-room">seed demo night<small>luma</small></span>
+            <span>22</span><span class="record-hit">2</span><span>flagged 2</span>
+          </div>
+          <div class="record-row">
+            <span class="record-room">ai builders mixer<small>partiful</small></span>
+            <span>31</span><span>0</span><span>none</span>
+          </div>
+          <div class="record-foot">
+            <strong>2 founders</strong> raised after a room you shared with them. you never followed up.
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SIGNAL VS NOISE ==================== -->
+<!-- ==================== WHY ROOMS ==================== -->
 <section class="signal-section" id="intelligence">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-eyebrow">// Intelligence</div>
+      <div class="section-eyebrow">// Why rooms</div>
       <h2 class="section-title">
-        Signal vs <em>Noise.</em>
+        Every fund buys the same <em>data.</em>
       </h2>
       <p class="section-sub">
-        Stop wasting time on NPCs. Doss flags high-value connections and clout risks based on cross-referenced data — so you walk in with a target list, not a guess list.
+        Harmonic, Specter, and PitchBook read what founders publish online. You and every fund you compete with see it on the same day. Founders start turning up at investor-heavy dinners and demo nights weeks earlier.
       </p>
     </div>
 
-    <div class="person-grid">
-      <!-- Signal -->
-      <article class="person-card reveal">
-        <div class="card-tab signal">
-          <span class="file-id">FILE // DSR-014-MC</span>
-          <span class="classification signal">Signal</span>
+    <div class="workflow-grid">
+      <div class="workflow-card reveal">
+        <div class="phase-header">
+          <span class="phase-num">// 01</span>
         </div>
-        <div class="person-body">
-          <div class="person-header">
-            <div class="person-photo maya">
-              <svg class="reticle" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="22" stroke="rgba(255,255,255,0.45)" stroke-width="0.6" stroke-dasharray="2 3"/>
-                <line x1="32" y1="4" x2="32" y2="14" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <line x1="32" y1="50" x2="32" y2="60" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <line x1="4" y1="32" x2="14" y2="32" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <line x1="50" y1="32" x2="60" y2="32" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <circle cx="32" cy="32" r="2" fill="rgba(255,255,255,0.8)"/>
-              </svg>
-            </div>
-            <div class="person-info">
-              <div class="person-name">Maya Chen</div>
-              <div class="person-role">Healthcare AI Investor · Series B+</div>
-              <div class="score-row">
-                <div class="score-badge signal">
-                  <span class="score-num">94</span>
-                  GREENLIGHT
-                </div>
-                <div class="meter">
-                  <div class="meter-fill signal"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <h3 class="phase-title">Online signals arrive late</h3>
+        <p class="phase-desc">Job posts, web traffic, and incorporation filings show up once a founder already has momentum. By then the round has a lead.</p>
+      </div>
 
-          <div class="intel-block">
-            <div class="intel-label">// Intel</div>
-            <div class="intel-content">Mutual friend: <strong>Alex K.</strong> Active thesis on workflow AI for clinical ops. Last 3 portfolio companies: vertical SaaS in regulated industries.</div>
-          </div>
-
-          <div class="intel-block">
-            <div class="intel-label">// Recommended Opener</div>
-            <div class="opener-quote">"Are you seeing more healthcare AI founders start with workflow wedges or diagnostics?"</div>
-          </div>
+      <div class="workflow-card reveal">
+        <div class="phase-header">
+          <span class="phase-num">// 02</span>
         </div>
-      </article>
+        <h3 class="phase-title">Rooms come first</h3>
+        <p class="phase-desc">A founder getting ready to raise starts showing up where investors gather. Doss is measuring that lead time now with a group of associates.</p>
+      </div>
 
-      <!-- Noise -->
-      <article class="person-card reveal">
-        <div class="card-tab noise">
-          <span class="file-id">FILE // DSR-019-JK</span>
-          <span class="classification noise">Clout Risk</span>
+      <div class="workflow-card reveal">
+        <div class="phase-header">
+          <span class="phase-num">// 03</span>
         </div>
-        <div class="person-body">
-          <div class="person-header">
-            <div class="person-photo jake">
-              <svg class="reticle" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="22" stroke="rgba(255,255,255,0.45)" stroke-width="0.6" stroke-dasharray="2 3"/>
-                <line x1="32" y1="4" x2="32" y2="14" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <line x1="32" y1="50" x2="32" y2="60" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <line x1="4" y1="32" x2="14" y2="32" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <line x1="50" y1="32" x2="60" y2="32" stroke="rgba(255,255,255,0.65)" stroke-width="1"/>
-                <circle cx="32" cy="32" r="2" fill="rgba(255,255,255,0.8)"/>
-              </svg>
-            </div>
-            <div class="person-info">
-              <div class="person-name">Jake</div>
-              <div class="person-role">"Stealth Founder" · Unverified</div>
-              <div class="score-row">
-                <div class="score-badge noise">
-                  <span class="score-num">31</span>
-                  CLOUT RISK
-                </div>
-                <div class="meter">
-                  <div class="meter-fill noise"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="intel-block">
-            <div class="intel-label">// Flags</div>
-            <div class="flag-list">
-              <span class="flag">No product link</span>
-              <span class="flag">14 podcast clips</span>
-              <span class="flag">Buzzword over-index</span>
-              <span class="flag">No commits in 18mo</span>
-            </div>
-          </div>
-
-          <div class="intel-block">
-            <div class="intel-label">// Directive</div>
-            <div class="directive">
-              <span class="stamp">▲</span>
-              Talk if bored. Do not pitch. Avoid intro requests.
-            </div>
-          </div>
-        </div>
-      </article>
+        <h3 class="phase-title">Your record is the edge</h3>
+        <p class="phase-desc">Event platforms know who RSVP'd. Only you know who you flagged, met, or passed on, and whether your fund won the deal. Doss builds on that.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -2009,10 +2028,10 @@
     <div class="section-head reveal">
       <div class="section-eyebrow">// How it works</div>
       <h2 class="section-title">
-        Three steps. <em>No app required.</em>
+        Three steps. <em>Private by default.</em>
       </h2>
       <p class="section-sub">
-        Drop a link. Get the brief. Follow up. Doss handles the in-between — quietly, in your texts.
+        Doss reads only the rooms you were in. Your notes and your fund's outcomes never leave your account.
       </p>
     </div>
 
@@ -2022,22 +2041,19 @@
         <div class="phase-header">
           <span class="phase-num">// Phase 01</span>
           <div class="phase-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
           </div>
         </div>
-        <h3 class="phase-title">Text an event link</h3>
-        <p class="phase-desc">Luma, Partiful, Calendar, or a pasted attendee list. Doss extracts the room instantly.</p>
+        <h3 class="phase-title">Connect your rooms</h3>
+        <p class="phase-desc">Your calendar, Luma, Partiful, or a guest list you already have. Dinners and invites count too.</p>
         <div class="phase-detail">
-          <div class="ingest-link">
-            <span class="accent">lu.ma/</span>ai-founder-party<span class="cursor"></span>
+          <div class="source-row">
+            <span class="source-name">Calendar</span>
+            <span class="source-status">CONNECTED</span>
           </div>
           <div class="source-row">
-            <span class="source-name">Attendees extracted</span>
-            <span class="source-status">47 OK</span>
-          </div>
-          <div class="source-row">
-            <span class="source-name">Event metadata</span>
-            <span class="source-status">PARSED</span>
+            <span class="source-name">Guest lists</span>
+            <span class="source-status">YOUR VIEW ONLY</span>
           </div>
         </div>
       </div>
@@ -2047,15 +2063,15 @@
         <div class="phase-header">
           <span class="phase-num">// Phase 02</span>
           <div class="phase-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg>
           </div>
         </div>
-        <h3 class="phase-title">Get the room brief</h3>
-        <p class="phase-desc">Who matters, what to say, who to avoid — texted to you one hour before the event.</p>
+        <h3 class="phase-title">Mark what you did</h3>
+        <p class="phase-desc">Flagged, met, or passed. One tap per founder, kept in your account.</p>
         <div class="phase-detail">
           <div class="brief-preview">
-            <div class="brief-time">T-60 MIN · INCOMING</div>
-            <div class="brief-msg">5 worth meeting. Open with <strong>Maya</strong> — mutual: Alex. Avoid "stealth Jake."</div>
+            <div class="brief-time">AFTER · SEED DEMO NIGHT</div>
+            <div class="brief-msg">22 founders in the room. You flagged <strong>2</strong> and met 1.</div>
           </div>
         </div>
       </div>
@@ -2065,15 +2081,15 @@
         <div class="phase-header">
           <span class="phase-num">// Phase 03</span>
           <div class="phase-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
           </div>
         </div>
-        <h3 class="phase-title">Follow up after</h3>
-        <p class="phase-desc">Doss drafts the messages you should send tomorrow — to the people you actually met.</p>
+        <h3 class="phase-title">See which rooms pay off</h3>
+        <p class="phase-desc">Doss checks who later raised and ranks your rooms by how often they surface fundable founders first.</p>
         <div class="phase-detail">
           <div class="brief-preview">
-            <div class="brief-time">DAY AFTER · DRAFTED</div>
-            <div class="brief-msg">"Great seeing you again, <strong>Sarah</strong> — I still owe you that healthcare AI note. Coffee next week?"</div>
+            <div class="brief-time">MONDAY · ROOM YIELD</div>
+            <div class="brief-msg"><strong>Infra founders dinner:</strong> 3 of 9 founders raised within six months. It runs again Thursday.</div>
           </div>
         </div>
       </div>
@@ -2087,11 +2103,11 @@
     <div class="dark-cta-band-card">
       <div class="dark-cta-band-text">
         <h2 class="dark-cta-band-headline">
-          before the event, doss <em>texts you the brief.</em>
+          meet the founder <em>before the round.</em>
         </h2>
       </div>
       <a href="./login" class="btn btn-light btn-large">
-        Get Doss
+        Request access
         <span class="btn-arrow">→</span>
       </a>
     </div>
@@ -2104,10 +2120,10 @@
     <div class="footer-inner">
       <div class="footer-top">
         <p class="footer-tagline">
-          The context layer for <em>real-world</em> networking.
+          The sourcing record for <em>real-world</em> rooms.
         </p>
         <a href="./login" class="btn btn-primary">
-          Get Doss
+          Request access
           <span class="btn-arrow">→</span>
         </a>
       </div>
@@ -2116,13 +2132,8 @@
           <a href="#" class="logo" style="font-size: 19px;">
             <span>Doss</span>
           </a>
-          <span class="footer-copy">© 2024 · Actionable Intelligence</span>
+          <span class="footer-copy">© 2026 · Doss</span>
         </div>
-        <ul class="footer-links">
-          <li><a href="#">Privacy Protocol</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Security Whitepaper</a></li>
-        </ul>
       </div>
     </div>
   </div>
